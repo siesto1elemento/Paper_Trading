@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head>   
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
         <title>
             Indian Stock Simulator
         </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
+        <div class="container"> 
         <h1>
             Virtual Trade
         </h1>
-
+        </div>
         
 <form action="contactus.php" method="post">
 
@@ -24,11 +29,24 @@
     <p>Exchange:</p>
     <p><input type="radio" name="exchange" value="BSE"> BSE</p>
     <p><input type="radio" name="exchange" value="NSE"> NSE</p>
-    
+    <p>
+    </p>
+    <p>        
+    </p>
 
     <div class="name">
-        <label for="First_Name">Buy stock:</label>
-        <input name="first_name" id="First_Name" type="text" />
+        <label for="myHouse">Buy stock:</label>
+	<input list="magicHouses" id="myHouse" name="myHouse" placeholder="type here..." />
+	<datalist id="magicHouses">
+  <option value="Reliance">
+  <option value="TATA steel">
+  <option value="Infosys">
+  <option value="Adani">
+  <option value="Parle">
+  <option value="Avenue supermarkets">
+	
+
+    </datalist>
 
         <label for="Name">amount:</label>
         <input name="last_name" id="Last_Name" type="text" /> 
@@ -45,7 +63,8 @@
     </div>
 
 
-    <p><input type="submit"></p>
+    <p><input type="submit" value="Submit"  >
+        </p>
 
     
 
