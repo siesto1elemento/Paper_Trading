@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
         <title>
             LONGTERM
         </title>
@@ -21,7 +21,7 @@
         </p>
     </div>
     
-    <form action="app.py" method="post">
+    <form action="{{ url_for('process_form') }}" method="post">
         <P><h2>Buy Stock:</h2></P>
         <input type ="text" name = "stock name"placeholder="input stock name" >
         <input type ="text" name="amount buy" placeholder="amount to buy" >
@@ -40,7 +40,7 @@
         <br>
         <br>
         <br>
-        <input type ="submit" value="Submit" >
+        <input type ="submit" name = "submit" value="Submit" >
 
     </form>
     </body>
