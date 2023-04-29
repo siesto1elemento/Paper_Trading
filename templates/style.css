@@ -26,13 +26,11 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
     color: #555;
+    text-align: center;
   }
   
   /* Styles for the form */
-  form {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+  
   
   /* Styles for the input fields */
   input[type="text"] {
@@ -42,6 +40,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 20%;
+    text-align: center;
   }
   
   /* Styles for the submit button */
@@ -54,6 +53,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: 50px;
   }
   
   input[type="submit"]:hover {
@@ -68,4 +69,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 60%;
+    margin-left: 50px; ;
   }
+
+  
+form input[type="text"] {
+    margin-left: 50px;
+  }
+
+h2{
+    margin-left: 50px;
+}
