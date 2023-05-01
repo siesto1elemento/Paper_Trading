@@ -8,15 +8,18 @@ def home():
 
 @app.route('/submit')
 def submitted():
-    return render_template('result.html', message='Your form has been submitted successfully!')
+    stocknamebuy = request.args.get('stocknamebuy')
+    amountbuy = request.args.get('amountbuy')
+    return render_template('result.html', stocknamebuy=stocknamebuy, amountbuy=amountbuy, message='Your form has been submitted successfully!')
 
 @app.route('/process_form', methods=['POST'])
 def process_form():
-    # Process the form data here
-    # ...
+    
+    stocknamebuy = request.form['stocknamebuy']
+    amountbuy = request.form['amountbuy']
 
-    # Redirect the user to the submitted page
-    return redirect(url_for('submitted'))
-
+    # Redirect the user to the submitted page, passing the variables as arguments
+    return redirect(url_for('submitted', stocknamebuy=stocknamebuy, amountbuy=amountbuy))
+    
 if __name__ == '__main__':
     app.run(debug=True)
